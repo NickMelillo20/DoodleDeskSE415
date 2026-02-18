@@ -1,14 +1,14 @@
 # DoodleDeskSE415
 Software Engineering II DoodleDesk Notetaking app group project
 ## Table of contents
-* [About] (#About)
-* [Technologies] (#Technologies)
-* [Setup] (#Setup)
-* [Features] (#Features)
-* [Status] (#Status)
-* [Sources] (#Sources)
-* [Screenshots] (#Screenshots)
-* [Team info] (#Team-info)
+* [About](#About)
+* [Technologies](#Technologies)
+* [Setup](#Setup)
+* [Features](#Features)
+* [Status](#Status)
+* [Sources](#Sources)
+* [Screenshots](#Screenshots)
+* [Other info](#Other-info)
 
 ## About
 A notes app that allows users to fully customize the way their notes look and feel. Users will be able to login and then be redirected to their homepage. 
@@ -22,6 +22,9 @@ Project is created with:
 
 ## Setup
 To run this project...
+```
+
+```
 
 ## Features
 ### To Do:
@@ -38,7 +41,10 @@ In Development
 ...
 
 ## Screenshots
-"Place screen shots of app here"
+Mockup
 
-## Team Info
-"Member names, emails, etc go here"
+## Other Info
+Jalen Osborne - osbornejalen@gmail.com
+Nick Melillo  -
+Sam Patuto -
+Alex Kovatchev -
