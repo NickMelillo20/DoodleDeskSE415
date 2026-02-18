@@ -1,0 +1,37 @@
+.button{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.button:hover{
+    background-color: black;
+}
+
+.noteIcon{
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: none;
+    border: none;
+    padding: none;
+    padding: 0;
+    cursor: pointer;
+}
+.noteIcon img{
+    width: 100px;
+    height: auto;
+}
+
+.login{
+    display: flex;
+    position: fixed;
+    padding: 20px 20px;
+    border-radius: 40px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    width: 300px;    
+}
