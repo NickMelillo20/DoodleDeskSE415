@@ -42,6 +42,8 @@ In Development
 
 ## Screenshots
 Mockup
+![Alt text](images/Mockup1.png)
+![Alt text](images/Mockup2.png)
 
 ## Other Info
 Jalen Osborne - osbornejalen@gmail.com
