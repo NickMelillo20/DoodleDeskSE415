@@ -41,12 +41,13 @@ In Development
 ...
 
 ## Screenshots
-Mockup
+### Mockup
 ![Alt text](images/Mockup1.png)
 ![Alt text](images/Mockup2.png)
 
 ## Other Info
-Jalen Osborne - osbornejalen@gmail.com
-Nick Melillo  -
-Sam Patuto -
-Alex Kovatchev -
+Contact the team here!\
+Jalen Osborne - osbornejalen@gmail.com\
+Nick Melillo  -\
+Sam Patuto -\
+Alex Kovatchev -\
