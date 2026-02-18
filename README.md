@@ -1,4 +1,5 @@
 # DoodleDeskSE415
+![Alt text](images/DDLogo.png)
 Software Engineering II DoodleDesk Notetaking app group project
 ## Table of contents
 * [About](#About)
