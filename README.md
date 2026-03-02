@@ -1,6 +1,6 @@
 # DoodleDeskSE415
 ![Alt text](images/DDLogo.png)
-Software Engineering II DoodleDesk Notetaking app group project
+Software Engineering II. Notetaking app group project.
 ## Table of contents
 * [About](#About)
 * [Technologies](#Technologies)
@@ -16,10 +16,9 @@ A notes app that allows users to fully customize the way their notes look and fe
 Users will be able to create multiple “sticky notes” where they can type, draw, or paste photos into. Users will be able to connect these notes, highlight them, change their size, and many other customization options.
 
 ## Technologies
-Project is created with:
-...
-...
-...
+Project is created with:\
+HTML\
+CSS
 
 ## Setup
 To run this project...
@@ -48,7 +47,7 @@ In Development
 
 ## Other Info
 Contact the team here!\
-Jalen Osborne - osbornejalen@gmail.com\
-Nick Melillo  -\
-Sam Patuto -\
-Alex Kovatchev -\
+Jalen Osborne - osbornej2@montclair.edu\
+Nick Melillo - melillon1@montclair.edu\
+Sam Patuto - patutos1@montclair.edu\
+Alex Kovatchev - kovetcheva1@montclair.edu
