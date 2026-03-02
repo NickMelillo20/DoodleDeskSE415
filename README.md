@@ -27,12 +27,12 @@ To run this project...
 ```
 
 ## Features
-### To Do:
-- Database
 - User Login
 - Interactive GUI
-- Basic note features
 - Homepage
+### To Do:
+- Database
+- Basic note features
 
 ## Status
 In Development
