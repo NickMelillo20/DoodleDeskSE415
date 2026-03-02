@@ -1,30 +1,45 @@
-<!-- Login Page for DoodleDesk
- With this page, users will be able to create accounts
- that will be stored in a database. From there, the user will
- be asked to provide their credentials to sign in to their 
- notes board-->
+<!-- This is the landing page for DoodleDesk!
+ After logging in, users will be met with a 'board'
+ with all of their notes. Here users will be able to add
+ sticky notes that contain information they need -->
 
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Login</title>
-</head>
-<body>
-    <div class="login"> <!-- Handler for Username and Password -->
-        <form method="post" action="" class="">
-            <label for="username">Username</label>
-            <input type="username" id="username" name="username" required>
+<html lang='en'>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Home - Doodle Desk</title>
 
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required>
+        <style>
+            h1 {
+                text-align: center;
+                font-family: Georgia, serif;
+            }  
+            body {
+                background: linear-gradient(rgba(255,255,255,0.1), rgba(0, 0, 0, 0.5)), url('desk.jpg') center/cover fixed;
+                min-height: 100vh;
+            }      
+        </style>
+    </head>
 
-            <button type="submit">Log In</button>
-        </form>
+    <body>
+        <h1>Doodle Desk</h1>
+        
+        <!-- Container for all user options -->
+        <div class ="options"> 
+            <a href="" class="button"> Next Page</a>
+            <a href="" class="button"> Previous Page</a>
+            <a href="" class="button"> Settings</a>
+            <a href="login.html" class="button" style="float: right;"> Logout</a>
+        </div>
+        <hr width="100%" size="2" noshade> <!-- Horizontal Line across the top of the screen, credit: Geeks4Geeks-->
 
-    </div>
-</body>
+        <div class="noteIcon">
+            <img id="addNoteIcon" src="testnotepad.png" alt="Add Note">
+        </div>
+
+        <script type="text/javascript" src="script.js"></script>
+
+    </body>
 </html>
- 
