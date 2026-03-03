@@ -27,18 +27,20 @@ To run this project...
 ```
 
 ## Features
-- User Login
+- User Login & Sign up
 - Interactive GUI
 - Homepage
+- Basic Note Features
 ### To Do:
 - Database
-- Basic note features
 
 ## Status
 In Development
 
 ## Sources
-...
+### Login & Sign Up
+- GeeksforGeeks
+- W3Schools
 
 ## Screenshots
 ### Mockup
