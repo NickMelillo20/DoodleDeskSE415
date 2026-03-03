@@ -1,0 +1,78 @@
+<!--This is the login form. 
+after clicking login the user will be sent here to fill in their credentials.
+They will then be sent to the homepage source w3schools-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .login-form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .login-form h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .login-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .login-form input[type="text"],
+        .login-form input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .login-form input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        .login-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .login-form button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <form class="login-form" action="homepage.html" method="POST">
+        <h2>Login</h2>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        
+        <label>
+            <input type="checkbox" name="remember"> Remember me?
+        </label>
+        
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

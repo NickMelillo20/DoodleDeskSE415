@@ -12,6 +12,42 @@
     background-color: black;
 }
 
+.signupbtn{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.cancelbtn{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="password"]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* the forgot password text */
+.forgot-password {
+    display: block;
+    margin-top: 10px;
+    text-align: right;
+}
+
 .noteIcon{
     position: fixed;
     bottom: 20px;
@@ -28,6 +64,15 @@
 }
 
 .login{
+    display: flex;
+    position: fixed;
+    padding: 20px 20px;
+    border-radius: 40px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    width: 300px;    
+}
+
+.signup{
     display: flex;
     position: fixed;
     padding: 20px 20px;
