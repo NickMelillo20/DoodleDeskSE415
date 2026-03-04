@@ -8,8 +8,31 @@
     font-weight: bold;
 }
 
+.bigButton{
+    display: block;
+    
+    background-color: blue;
+    color: white;        
+    padding: 50px 40px;
+    border-radius: 25px;
+    margin: 10px;
+            
+    font-size: 36px;
+    text-align:center;
+    font-weight: bold;
+    text-decoration: none;
+}
+
 .button:hover{
     background-color: black;
+    color:white;
+    transform: translateY(-3px); 
+}
+
+.bigButton:hover{
+    background-color: black;
+    color: white;
+    transform: translateY(-3px);
 }
 
 .signupbtn{
