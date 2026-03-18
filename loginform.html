@@ -7,6 +7,7 @@ They will then be sent to the homepage source w3schools-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Login Form</title>
     <style>
         body {
@@ -14,14 +15,20 @@ They will then be sent to the homepage source w3schools-->
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
             margin: 0;
-            background-color: #f4f4f4;
+            background: linear-gradient(rgba(255,255,255,0.1), rgba(0, 0, 0, 0.5)), url('images/desk.jpg') center/cover fixed;
+            min-height: 100vh;
         }
+        .container {
+            display: flex;
+            flex-direction: column; 
+            align-items: center;    
+        }
+
         .login-form {
             background: #fff;
-            padding: 20px;
-            border-radius: 8px;
+            padding: 40px;
+            border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             width: 300px;
         }
@@ -60,19 +67,32 @@ They will then be sent to the homepage source w3schools-->
     </style>
 </head>
 <body>
-    <form class="login-form" action="homepage.html" method="POST">
-        <h2>Login</h2>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
+    <div class="container">  
+        <h1> 
+            <img src='images/DDLogo_transparent.png' alt="Logo" class="logo">
+        </h1>
         
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
+        <!-- Container for the login form -->
+        <form class="login-form" action="homepage.html" method="POST">
+            <h2>Login</h2>
+            
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <label>
+                <input type="checkbox" name="remember"> Remember me?
+            </label>
+            
+            <button type="submit">Submit</button>
+        </form>
         
-        <label>
-            <input type="checkbox" name="remember"> Remember me?
-        </label>
-        
-        <button type="submit">Submit</button>
-    </form>
+        <h3>
+            <label for="signup">Don't have an account?
+            <button onclick="window.location.href = 'signup.html';">Sign Up</button>
+        </h3>
+    </div>
 </body>
 </html>
