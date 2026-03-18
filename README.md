@@ -33,6 +33,8 @@ To run this project...
 - Basic Note Features
 ### To Do:
 - Database
+- Notes Customization
+- Shared Note Space Between Users
 
 ## Status
 In Development
