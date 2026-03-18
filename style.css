@@ -123,3 +123,9 @@ input[type="text"], input[type="password"]{
     height: 100%;
     font-family: sans-serif;
 }
+
+.logo {
+  float: center;
+  width: px;
+  height: 100px;
+}
