@@ -1,0 +1,55 @@
+!-- This is the settings page for DoodleDesk!
+ when users click on the settings button, 
+ they will be taken to this page where they can change their username and password,
+ enable dark mode, change notes color, and more! 
+ -->
+
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Settings - Doodle Desk</title>
+
+        <style>
+            h1 {
+                text-align: center;
+                font-family: Georgia, serif;
+            }  
+            body {
+                background: linear-gradient(rgba(255,255,255,0.1), rgba(0, 0, 0, 0.5)), url('images/desk.jpg') center/cover fixed;
+                min-height: 100vh;
+            }      
+        </style>
+    </head>
+
+    <form>
+        <body>
+            <h1>Settings</h1>
+
+            <div class="settings-container">
+                <label for="username">Change Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter new username">
+
+                <label for="password">Change Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter new password">
+
+                <label for="darkmode">Enable Dark Mode?:</label>
+                <input type="checkbox" id="darkmode" name="darkmode">
+
+                <label for="sync">Enable Cloud Sync?:</label>
+                <input type="checkbox" id="sync" name="sync">
+
+                <label for="notecolor">Change Notes Color:</label>
+                <input type="color" id="notecolor" name="notecolor">
+                
+
+                <button type="submit">Save Changes</button>
+            </div>
+
+            <a href="homepage.html" class="button">Back to Home</a>
+
+        </body>
+    </form>
+</html>
