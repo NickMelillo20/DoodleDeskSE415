@@ -29,23 +29,57 @@
             <h1>Settings</h1>
 
             <div class="settings-container">
-                <label for="username">Change Username:</label>
-                <input type="text" id="username" name="username" placeholder="Enter new username">
+                <label for="email">Change Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="Enter new email"><br><br>
+                
+                <label for="username">Change Username:</label><br>
+                <input type="text" id="username" name="username" placeholder="Enter new username"><br><br>
 
                 <label for="password">Change Password:</label>
                 <input type="password" id="password" name="password" placeholder="Enter new password">
+                <button type="button" id="togglePasswordButton">Show</button>
+
+                <script>
+                    const passwordInput = document.getElementById('password');
+                    const togglePasswordButton = document.getElementById('togglePasswordButton');
+
+                    togglePasswordButton.addEventListener('click', () => {
+                        if (passwordInput.type === 'password') {
+                            passwordInput.type = 'text';
+                            togglePasswordButton.textContent = 'Hide';
+                        } else {
+                            passwordInput.type = 'password';
+                            togglePasswordButton.textContent = 'Show';
+                        }
+                    });
+                </script>
 
                 <label for="darkmode">Enable Dark Mode?:</label>
                 <input type="checkbox" id="darkmode" name="darkmode">
 
-                <label for="sync">Enable Cloud Sync?:</label>
-                <input type="checkbox" id="sync" name="sync">
+                <label for="fontcolor">Change Font Color:</label>
+                <input type="color" id="fontcolor" name="fontcolor">
 
                 <label for="notecolor">Change Notes Color:</label>
                 <input type="color" id="notecolor" name="notecolor">
                 
 
-                <button type="submit">Save Changes</button>
+                <button type="button" id="saveChangesButton">Save Changes</button>
+                <button type="submit" id="confirmButton" style="display: none;">Confirm?</button>
+
+                <script>
+                    const saveChangesButton = document.getElementById('saveChangesButton');
+                    const confirmButton = document.getElementById('confirmButton');
+
+                    saveChangesButton.addEventListener('click', () => {
+                        saveChangesButton.style.display = 'none';
+                        confirmButton.style.display = 'inline-block';
+                    });
+
+                    confirmButton.addEventListener('click', () => {
+                        alert('Changes saved successfully!');
+                    });
+                </script>
             </div>
 
             <a href="homepage.html" class="button">Back to Home</a>

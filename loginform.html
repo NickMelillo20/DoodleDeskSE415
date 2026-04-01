@@ -62,11 +62,26 @@ They will then be sent to the homepage source w3schools-->
 <body>
     <form class="login-form" action="homepage.html" method="POST">
         <h2>Login</h2>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-        
-        <label for="password">Password:</label>
+        <label for="emailOrUsername">Enter Email or Username:</label>
+        <input type="text" id="emailOrUsername" name="emailOrUsername" required>
+        <label for="password">Enter Password:</label>
         <input type="password" id="password" name="password" required>
+        <button type="button" id="togglePasswordButton">Show</button>
+
+                <script>
+                    const passwordInput = document.getElementById('password');
+                    const togglePasswordButton = document.getElementById('togglePasswordButton');
+
+                    togglePasswordButton.addEventListener('click', () => {
+                        if (passwordInput.type === 'password') {
+                            passwordInput.type = 'text';
+                            togglePasswordButton.textContent = 'Hide';
+                        } else {
+                            passwordInput.type = 'password';
+                            togglePasswordButton.textContent = 'Show';
+                        }
+                    });
+                </script>
         
         <label>
             <input type="checkbox" name="remember"> Remember me?

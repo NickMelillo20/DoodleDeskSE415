@@ -129,3 +129,8 @@ input[type="text"], input[type="password"]{
   width: px;
   height: 100px;
 }
+
+/* for cursor. couldnt figure out rn. */
+body {
+    cursor: url('images/thumbtackcursor.png'), auto;
+}
