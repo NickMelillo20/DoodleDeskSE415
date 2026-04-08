@@ -21,7 +21,7 @@ if ($logged_in)
     <link rel="stylesheet" href="style.css">
 <style>
       body {
-            background:url('images/doodlebg.jpeg') center/cover fixed;
+            background: linear-gradient(rgba(255,255,255,0.1), rgba(0, 0, 0, 0.5)), url('images/doodlebg.jpeg') center/cover fixed;
             min-height: 100vh;
       } 
       
@@ -47,6 +47,7 @@ if ($logged_in)
             margin-bottom: 15px;
             border: 1px solid #ccc;
             border-radius: 5px;
+            box-sizing: border-box;
       }
 
       button {

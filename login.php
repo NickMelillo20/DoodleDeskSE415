@@ -25,7 +25,7 @@ if ($logged_in)
             align-items: center;
             height: 100vh;
             margin: 0;
-            background: url('images/doodlebg.jpeg') center/cover fixed;
+            background: linear-gradient(rgba(255,255,255,0.1), rgba(0, 0, 0, 0.5)), url('images/doodlebg.jpeg') center/cover fixed;
         }
         .login-form {
             background: #fff;
@@ -50,6 +50,7 @@ if ($logged_in)
             margin-bottom: 15px;
             border: 1px solid #ccc;
             border-radius: 4px;
+            box-sizing: border-box;
         }
         .login-form input[type="checkbox"] {
             margin-right: 5px;
