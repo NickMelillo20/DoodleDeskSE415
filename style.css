@@ -82,7 +82,7 @@ input[type="text"], input[type="password"]{
     cursor: pointer;
 }
 .noteIcon img{
-    width: 100px;
+    width: 20px;
     height: auto;
 }
 
@@ -125,9 +125,9 @@ input[type="text"], input[type="password"]{
 }
 
 .logo {
-  float: center;
-  width: px;
-  height: 100px;
+    float: center;
+    width: px;
+    height: 100px;
 }
 
 /* for cursor. couldnt figure out rn. */
