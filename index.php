@@ -4,6 +4,9 @@
  sticky notes that contain information they need -->
 
 <!DOCTYPE html>
+<?php
+include 'include.php';
+?>
 <html lang='en'>
     <head>
         <meta charset="UTF-8">
@@ -24,14 +27,15 @@
     </head>
 
     <body>
+        <?php include 'header.php'; ?>
         <h1>Page 1</h1>
         
         <!-- Container for all user options -->
         <div class ="options"> 
             <a href="" class="button"> Next Page</a>
             <a href="" class="button"> Previous Page</a>
-            <a href="settingsform.html" class="button"> Settings</a>
-            <a href="login.html" class="button" style="float: right;"> Logout</a>
+            <a href="settings.php" class="button"> Settings</a>
+            <a href="logout.php" class="button" style="float: right;"> Logout</a>
         </div>
         <hr width="100%" size="2" noshade> <!-- Horizontal Line across the top of the screen, credit: Geeks4Geeks-->
 

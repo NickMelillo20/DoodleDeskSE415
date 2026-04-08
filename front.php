@@ -3,7 +3,16 @@
  with all of their notes. Here users will be able to add
  sticky notes that contain information they need -->
 
- <!DOCTYPE html>
+<!DOCTYPE html>
+<?php
+include 'include.php';
+
+// If user is already logged in, redirect them to the homepage
+if ($logged_in)
+{
+    header('Location: index.php');
+    die();
+}?>
  <html lang='en'>
      <head>
          <meta charset="UTF-8">
@@ -29,14 +38,15 @@
      </head>
  
      <body>
+        <?php include 'header.php'; ?>
          <div class="container">
              <h1>Welcome To</h1>
              <img src='images/DDLogo_transparent.png' alt="Logo" class="logo">
          </div>
          <!-- Container for all user options -->
          <div class="options"> 
-             <a href="loginform.html" class="bigButton">Login</a>
-             <a href="signup.html" class="bigButton">Sign Up</a>
+             <a href="login.php" class="bigButton">Login</a>
+             <a href="signup.php" class="bigButton">Sign Up</a>
          </div>
  
  

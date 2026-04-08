@@ -24,7 +24,7 @@
         </style>
     </head>
 
-    <form>
+    <form method="POST">
         <body>
             <h1>Settings</h1>
 
@@ -76,13 +76,13 @@
                         confirmButton.style.display = 'inline-block';
                     });
 
-                    confirmButton.addEventListener('click', () => {
-                        alert('Changes saved successfully!');
-                    });
+                    // confirmButton.addEventListener('click', () => {
+                    //     alert('Changes saved successfully!');
+                    // });
                 </script>
             </div>
 
-            <a href="homepage.html" class="button">Back to Home</a>
+            <a href="index.php" class="button">Back to Home</a>
 
         </body>
     </form>

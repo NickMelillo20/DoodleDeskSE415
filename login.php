@@ -3,6 +3,15 @@ after clicking login the user will be sent here to fill in their credentials.
 They will then be sent to the homepage source w3schools-->
 
 <!DOCTYPE html>
+<?php
+include 'include.php';
+
+// If user is already logged in, redirect them to the homepage
+if ($logged_in)
+{
+    header('Location: index.php');
+    die();
+}?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -60,8 +69,10 @@ They will then be sent to the homepage source w3schools-->
     </style>
 </head>
 <body>
-    <form class="login-form" action="homepage.html" method="POST">
+    <?php include 'header.php'; ?>
+    <form class="login-form" method="POST">
         <h2>Login</h2>
+        <input type="hidden" name="action_type" value="login" />
         <label for="emailOrUsername">Enter Email or Username:</label>
         <input type="text" id="emailOrUsername" name="emailOrUsername" required>
         <span id="emailError" style="color: red; display: none;">Please enter your email or username.</span>

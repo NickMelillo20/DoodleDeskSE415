@@ -4,6 +4,15 @@ The form includes fields for username, email, and password.
 There is also a submit button to create the account. Source, W3Schools-->
 
 <!DOCTYPE html>
+<?php
+include 'include.php';
+
+// If user is already logged in, redirect them to the homepage
+if ($logged_in)
+{
+    header('Location: index.php');
+    die();
+}?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -56,8 +65,10 @@ There is also a submit button to create the account. Source, W3Schools-->
 
 </head>
 <body>
-    <form action="homepage.html" method="post">
+    <?php include 'header.php'; ?>
+    <form method="post">
         <h2>Sign Up Here!</h2>
+        <input type="hidden" name="action_type" value="edit_user" />
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required>
         <label for="username">Username:</label>
