@@ -28,7 +28,7 @@ To run this project...
 - In the XAMPP manager, go to applications folder and place the DD file in the htdocs folder
 - In manager, go to manage servers and start Apche Web Server and My SQL Database
 - once they're running, open your browser and type localhost/phpmyadmin and hit enter
-- once there, copy and paste schema.sql into the sql tab and run in
+- once there, copy and paste schema.sql(located in the DD folder) into the sql tab and run it
 - open a new tab and type localhost/DD and you should be brought to the front page 
 
 ## Features
