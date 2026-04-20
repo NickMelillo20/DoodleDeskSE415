@@ -18,7 +18,10 @@ Users will be able to create multiple “sticky notes” where they can type, dr
 ## Technologies
 Project is created with:\
 HTML\
-CSS
+CSS \
+PHP \
+Hack \
+Java Script
 
 ## Setup
 To run this project...
