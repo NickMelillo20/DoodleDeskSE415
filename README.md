@@ -22,22 +22,25 @@ CSS
 
 ## Setup
 To run this project...
-```
-
-```
+- Download the DoodleDesk zip file
+- Download XAMPP, an open-source software package
+- Unzip DoodleDesk and rename the folder to "DD"
+- In the XAMPP manager, go to applications folder and place the DD file in the htdocs folder
+- In manager, go to manage servers and start Apche Web Server and My SQL Database
+- once they're running, open your browser and type localhost/phpmyadmin and hit enter
+- once there, copy and paste schema.sql into the sql tab and run in
+- open a new tab and type localhost/DD and you should be brought to the front page 
 
 ## Features
 - User Login & Sign up
 - Interactive GUI
 - Homepage
 - Basic Note Features
-### To Do:
-- Database
 - Notes Customization
-- Shared Note Space Between Users
+
 
 ## Status
-In Development
+Demo coming soon!
 
 ## Sources
 ### Login & Sign Up
