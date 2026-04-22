@@ -23,6 +23,10 @@ include 'include.php';
                 background: linear-gradient(rgba(255,255,255,0.1), rgba(0, 0, 0, 0.5)), url('images/desk.jpg') center/cover fixed;
                 min-height: 100vh;
             }      
+
+            .note-container {
+                border: 5px solid red;
+            }
         </style>
     </head>
 
