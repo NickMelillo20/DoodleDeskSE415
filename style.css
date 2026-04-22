@@ -5,14 +5,20 @@
 
 .note {
     margin: 8px;
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    resize: both;
+    overflow: auto;
 }
 .note textarea {
     background-color: #ffffa0;
     border: 0 none;
-    resize: vertical;
-    overflow: hidden;
+    overflow: auto;
+    
     width: 100%;
     height: 100%;
+    resize: none; /* prevent double resize */
     font-family: sans-serif;
 }
 

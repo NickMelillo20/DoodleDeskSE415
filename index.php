@@ -24,9 +24,6 @@ include 'include.php';
                 min-height: 100vh;
             }      
 
-            .note-container {
-                border: 5px solid red;
-            }
         </style>
     </head>
 

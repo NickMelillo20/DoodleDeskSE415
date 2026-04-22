@@ -26,7 +26,9 @@ function collectNotes() {
             notes.push({
                 text: text,
                 x: note.offsetLeft,
-                y: note.offsetTop
+                y: note.offsetTop,
+				width: note.offsetWidth,
+				height: note.offsetHeight
             });
         }
     });
@@ -57,6 +59,8 @@ function appendNote(noteData) {
     const text = noteData.text || noteData; // supports old format
     const x = noteData.x || 50;
     const y = noteData.y || 50;
+	const width = noteData.width || 200;
+	const height = noteData.height || 150;
 
     note.innerHTML = `
         <button class="dragBtn">Drag</button>
@@ -67,6 +71,9 @@ function appendNote(noteData) {
     note.style.position = "absolute";
     note.style.left = x + "px";
     note.style.top = y + "px";
+
+	note.style.width = width + "px";
+	note.style.heighg = height + "px";
 
     const dragBtn = note.querySelector(".dragBtn");
 
