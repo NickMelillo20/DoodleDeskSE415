@@ -15,7 +15,11 @@ if (array_key_exists('page', $_GET) && is_numeric($_GET['page']))
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
-        <script>const NOTES_KEY = "notes_p<?php echo $page ?>";</script>
+        <!-- <script>const NOTES_KEY = "notes_p<?php echo $page ?>";</script> -->
+        <script>
+            const userId = "<?php echo $_SESSION['id'] ?? 'guest'; ?>";
+            const NOTES_KEY = `notes_user_${userId}_p<?php echo $page ?>`;
+        </script>
         <title>Home - Doodle Desk</title>
 
         <style>
