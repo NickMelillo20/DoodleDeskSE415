@@ -71,7 +71,7 @@ function appendNote(noteData) {
     note.style.top = y + "px";
 
 	note.style.width = width + "px";
-	note.style.heighg = height + "px";
+	note.style.height = height + "px";
 
     const dragBtn = note.querySelector(".dragBtn");
 
@@ -85,50 +85,55 @@ function appendNote(noteData) {
 
 function enableDrag(note, dragBtn) {
     let isDragging = false;
-    let offsetX, offsetY;
+    let offsetX = 0;
+    let offsetY = 0;
 
     dragBtn.addEventListener("click", () => {
         isDragging = !isDragging;
         dragBtn.textContent = isDragging ? "Stop" : "Drag";
-
-        if (isDragging) {
-            note.style.position = "absolute";
-            note.style.zIndex = 1000;
-        }
     });
 
     note.addEventListener("mousedown", (e) => {
         if (!isDragging) return;
 
-        offsetX = e.clientX - note.offsetLeft;
-        offsetY = e.clientY - note.offsetTop;
+        const containerRect = noteContainer.getBoundingClientRect();
+        const noteRect = note.getBoundingClientRect();
+
+        // IMPORTANT: convert mouse position into container space
+        const mouseX = e.clientX - containerRect.left;
+        const mouseY = e.clientY - containerRect.top;
+
+        offsetX = mouseX - note.offsetLeft;
+        offsetY = mouseY - note.offsetTop;
 
         function onMouseMove(e) {
-			const containerRect = noteContainer.getBoundingClientRect();
- 			const noteRect = note.getBoundingClientRect();
-			let newX = e.clientX - offsetX;
-			let newY = e.clientY - offsetY;
-	
-			// Clamp within container bounds
-			const minX = containerRect.left;
-			const minY = containerRect.top;
-			const maxX = containerRect.right - noteRect.width;
-			const maxY = containerRect.bottom - noteRect.height;
+            const containerRect = noteContainer.getBoundingClientRect();
 
-    		newX = Math.max(minX, Math.min(newX, maxX));
-    		newY = Math.max(minY, Math.min(newY, maxY));
+            const mouseX = e.clientX - containerRect.left;
+            const mouseY = e.clientY - containerRect.top;
 
-    		// Convert to container-relative position
-    		note.style.left = (newX - containerRect.left) + "px";
-    		note.style.top = (newY - containerRect.top) + "px";
-		}
+            let newX = mouseX - offsetX;
+            let newY = mouseY - offsetY;
+
+            // clamp inside container
+            const maxX = containerRect.width - note.offsetWidth;
+            const maxY = containerRect.height - note.offsetHeight;
+
+            newX = Math.max(0, Math.min(newX, maxX));
+            newY = Math.max(0, Math.min(newY, maxY));
+
+            note.style.left = newX + "px";
+            note.style.top = newY + "px";
+        }
+
+        function onMouseUp() {
+            document.removeEventListener("mousemove", onMouseMove);
+            document.removeEventListener("mouseup", onMouseUp);
+            collectNotes();
+        }
 
         document.addEventListener("mousemove", onMouseMove);
-
-        document.addEventListener("mouseup", () => {
-            document.removeEventListener("mousemove", onMouseMove);
-            collectNotes();
-        }, { once: true });
+        document.addEventListener("mouseup", onMouseUp);
     });
 }
 
