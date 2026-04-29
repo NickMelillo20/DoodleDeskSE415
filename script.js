@@ -18,15 +18,13 @@ function collectNotes() {
         const textarea = note.querySelector("textarea");
         const text = textarea.value;
 
-        if (text === "") {
-            note.remove();
-        } else {
+        if (text !== "") {
             notes.push({
-                text: text,
-                x: note.offsetLeft,
-                y: note.offsetTop,
-				width: note.offsetWidth,
-				height: note.offsetHeight
+            text: text,
+            x: note.offsetLeft,
+            y: note.offsetTop,
+            width: note.offsetWidth,
+            height: note.offsetHeight
             });
         }
     });
@@ -61,7 +59,10 @@ function appendNote(noteData) {
 	const height = noteData.height || 150;
 
     note.innerHTML = `
-        <button class="dragBtn">Drag</button>
+        <div class="note-header">
+            <button class="dragBtn">Drag</button>
+            <button class="deleteBtn">✕</button>
+        </div>
         <textarea>${text}</textarea>
     `;
 
@@ -81,6 +82,13 @@ function appendNote(noteData) {
     enableDrag(note, dragBtn);
 
     noteContainer.appendChild(note);
+
+    const deleteBtn = note.querySelector(".deleteBtn");
+
+    deleteBtn.addEventListener("click", () => {
+        note.remove();
+        collectNotes();
+    });
 }
 
 function enableDrag(note, dragBtn) {
