@@ -60,4 +60,4 @@ Contact the team here!\
 Jalen Osborne - osbornej2@montclair.edu\
 Nick Melillo - melillon1@montclair.edu\
 Sam Patuto - patutos1@montclair.edu\
-Alex Kovatchev - kovetcheva1@montclair.edu
+Alex Kovatchev - kovatcheva1@montclair.edu
