@@ -115,6 +115,7 @@ input[type="text"], input[type="password"]{
     padding: none;
     padding: 0;
     cursor: pointer;
+    z-index: 9;
 }
 .noteIcon img{
     width: 20px;

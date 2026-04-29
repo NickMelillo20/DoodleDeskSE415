@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-
-	const NOTES_KEY = "notes";
 	const noteContainer = document.querySelector(".note-container");
 
 	function getNotes() {
@@ -137,6 +135,6 @@ function enableDrag(note, dragBtn) {
 	var notes = getNotes();
 	notes.forEach(n => appendNote(n));
 
-	document.getElementById("addNoteIcon")?.addEventListener("click", addNote);
+	document.getElementById("noteIcon")?.addEventListener("click", addNote);
 
 });
