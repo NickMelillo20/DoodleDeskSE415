@@ -1,5 +1,5 @@
 .note-container {
-    column-count: 1; /* temporary */
+    column-count: 1; 
     column-gap: 4px;
 }
 
@@ -27,11 +27,6 @@
     width: px;
     height: 100px;
 }
-
-/* for cursor. couldnt figure out rn. 
-body {
-    cursor: url('images/thumbtackcursor.png'), auto;
-}*/
 
 .button{
     display: inline-block;
@@ -143,7 +138,6 @@ input[type="text"], input[type="password"]{
 /* for note.html */
 
 .note-container {
-    border: 2px solid red;
     column-count: 1; /* temporary */
     column-gap: 4px;
     position: relative;
