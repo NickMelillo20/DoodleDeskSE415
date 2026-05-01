@@ -36,14 +36,58 @@ if (array_key_exists('page', $_GET) && is_numeric($_GET['page']))
     </head>
 
     <body>
+        <!-- Header with page title and options -->
         <?php include 'header.php'; ?>
-        <h1>Page <?php echo $page ?></h1>
-        
+        <?php
+        $defaultTitle = "Page $page";
+        $customTitleKey = "custom_title_p$page";
+        $customTitle = $_SESSION[$customTitleKey] ?? $defaultTitle;
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['custom_title'])) {
+            $customTitle = htmlspecialchars($_POST['custom_title'], ENT_QUOTES, 'UTF-8');
+            $_SESSION[$customTitleKey] = $customTitle;
+        }
+        ?>
+        <div style="text-align: center; margin: 20px 0;">
+            <h1 style="font-size: 2.5rem; color: #333;"><?php echo $customTitle; ?></h1>
+            <form method="POST" style="display: inline-block; margin-top: 10px;">
+            <input 
+                type="text" 
+                name="custom_title" 
+                placeholder="Edit Page Title" 
+                value="<?php echo $customTitle; ?>" 
+                style="padding: 10px; font-size: 1rem; border: 1px solid #ccc; border-radius: 5px; width: 300px;"
+            >
+            <button 
+                type="submit" 
+                style="padding: 10px 20px; font-size: 1rem; background-color:rgb(2, 50, 222); color: white; border: none; border-radius: 5px; cursor: pointer;"
+            >
+                Save
+            </button>
+
+            </form>
+        </div>
         <!-- Container for all user options -->
-        <div class ="options"> 
+        <div class="options"> 
             <a href="?page=<?php echo $page + 1 ?>" class="button"> Next Page</a>
             <a href="?page=<?php echo max(1, $page - 1) ?>" class="button"> Previous Page</a>
             <a href="settings.php" class="button"> Settings</a>
+            <form method="GET" action="index.php" style="display: inline-block; margin-left: 10px;">
+            <input 
+                type="number" 
+                name="page" 
+                placeholder="Enter Page Number" 
+                style="padding: 5px; font-size: 1rem; border: 1px solid #ccc; border-radius: 5px; width: 150px;"
+                min="1"
+                max="100"
+            >
+            <button 
+                type="submit" 
+                style="padding: 5px 10px; font-size: 1rem; background-color:rgb(2, 50, 222); color: white; border: none; border-radius: 5px; cursor: pointer;"
+            >
+                Go
+            </button>
+            </form>
             <a href="logout.php" class="button" style="float: right;"> Logout</a>
         </div>
         <hr width="100%" size="2" noshade> <!-- Horizontal Line across the top of the screen, credit: Geeks4Geeks-->
