@@ -8,7 +8,7 @@ Software Engineering II. Notetaking app group project.
 * [Features](#Features)
 * [Status](#Status)
 * [Sources](#Sources)
-* [Screenshots](#Screenshots)
+* [Test cases](#Test-cases)
 * [Other info](#Other-info)
 
 ## About
@@ -50,10 +50,91 @@ Demo coming soon!
 - GeeksforGeeks
 - W3Schools
 
-## Screenshots
-### Mockup
-![Alt text](images/Mockup1.png)
-![Alt text](images/Mockup2.png)
+## Test cases
+### Test Case 1: Authentication (Login/Signup)
+T-001\
+Valid Input: User signs up with a valid email, username, and password.\
+Expected Result: account is successfully created, and the user is redirected to the login page\
+Actual Result:
+![Alt text](images/T-001P1.png)
+![Alt text](images/T-001P2.png)
+Status: PASS
+
+T-002\
+Valid Input: User logs in with correct credentials.\
+Expected Result: User is redirected to the notes page.\
+Actual Result:
+![Alt text](images/T-002P1.png)
+![Alt text](images/T-002P2.png)
+Status: PASS
+
+T-003\
+Invalid Input: User submits empty fields for signup.\
+Expected result: Error message is displayed, site does not redirect.\
+Actual result:
+![Alt text](images/T-003.png)
+Status: PASS
+
+T-004\
+Invalid Input: User entered an invalid email.\
+Expected result: email rejected.\
+Actual result: 
+![Alt text](images/T-004P1.png)
+![Alt text](images/T-004P2.png)
+Status: PASS
+
+T-005\
+Invalid Input: User enters the wrong password.\
+Expected result: Error shown.\
+Actual result: 
+![Alt text](images/T-0056.png)
+Status: PASS
+
+T-006
+Invalid Input: User enters the wrong password.\
+Expected result: Error shown.\
+Actual result: 
+![Alt text](images/T-0056.png)
+Status: PASS
+
+### Test Case 2: Notes Functionality
+T-007\
+Valid Case: User can add and delete notes.\
+Expected result: user clicks add note and a note appears.\
+Actual Result: 
+![Alt text](images/T-007.png)
+Status: PASS
+
+T-008\
+Valid Case: User creates multiple notes.\
+Expected result: multiple notes display correctly.\
+Actual result:
+![Alt text](images/T-007.png)
+Status: PASS
+
+T-009\
+Valid Case: User creates a very long note.\
+Expected result: Note created without UI break.\
+Actual Result:
+![Alt text](images/T-009.png)
+Status: PASS
+
+### Test Case 3: Navigation Tests
+T-010\
+Valid Case: Navigation throughout pages.\
+Expected result: notes are saved throughout different pages.\
+Actual Result: 
+![Alt text](images/T-007.png)
+![Alt text](images/T-010.png)
+Status: PASS
+
+T-011\
+Valid Case: Search navigation.\
+Expected Result: User uses the search bar to navigate note pages.\
+Actutal result:
+![Alt text](images/T-011P1.png)
+![Alt text](images/T-011P2.png)
+Status: PASS
 
 ## Other Info
 Contact the team here!\
