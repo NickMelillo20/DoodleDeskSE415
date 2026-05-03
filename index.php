@@ -6,9 +6,31 @@
 <!DOCTYPE html>
 <?php
 include 'include.php';
+
 $page = 1;
-if (array_key_exists('page', $_GET) && is_numeric($_GET['page']))
-    $page = (int)($_GET['page']);
+
+// If searching
+if (isset($_GET['search']) && $_GET['search'] !== '') {
+    $search = strtolower(trim($_GET['search']));
+
+    // Case 1: numeric input
+    if (is_numeric($search)) {
+        $page = (int)$search;
+    } 
+    // Case 2: search by title
+    elseif (isset($_SESSION['page_titles'])) {
+        foreach ($_SESSION['page_titles'] as $p => $title) {
+            if (strpos(strtolower($title), $search) !== false) {
+                $page = $p;
+                break;
+            }
+        }
+    }
+}
+// Fallback: direct page navigation
+elseif (isset($_GET['page']) && is_numeric($_GET['page'])) {
+    $page = (int)$_GET['page'];
+}
 ?>
 <html lang='en'>
     <head>
@@ -46,6 +68,7 @@ if (array_key_exists('page', $_GET) && is_numeric($_GET['page']))
         if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['custom_title'])) {
             $customTitle = htmlspecialchars($_POST['custom_title'], ENT_QUOTES, 'UTF-8');
             $_SESSION[$customTitleKey] = $customTitle;
+            $_SESSION['page_titles'][$page] = $customTitle;
         }
         ?>
         <div style="text-align: center; margin: 20px 0;">
@@ -74,9 +97,9 @@ if (array_key_exists('page', $_GET) && is_numeric($_GET['page']))
             <a href="settings.php" class="button"> Settings</a>
             <form method="GET" action="index.php" style="display: inline-block; margin-left: 10px;">
             <input 
-                type="number" 
-                name="page" 
-                placeholder="Enter Page Number" 
+                type="text" 
+                name="search" 
+                placeholder="Search Page Name or Number" 
                 style="padding: 5px; font-size: 1rem; border: 1px solid #ccc; border-radius: 5px; width: 150px;"
                 min="1"
                 max="100"
